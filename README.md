@@ -11,3 +11,6 @@ Very handy. More for my families every day use. Just that I don't forget my prec
 
 ![Screenshot](readme.files/Screenshot-basic.png)
 ![Screenshot](readme.files/Screenshot-unfold.png)
+
+# Install
+Copy the 3 files index.php, main.js and style.css to a subfolder on your webserver.
