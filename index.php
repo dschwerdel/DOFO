@@ -3,23 +3,22 @@
 // $PASSWORD
 // $LOCATION
 
-	session_start();
-	if(!(isset($_SESSION['hide']))) {
-		$_SESSION['hide'] = 'display: none;';
+session_start();
+if(!(isset($_SESSION['hide']))) {
+	$_SESSION['hide'] = 'display: none;';
+}
+
+if(isset($_POST['sub'])){
+	if($_POST['password'] === ''){
+		$_SESSION['verify'] = 'true';
+		unset($_SESSION['passerror']);
+		session_write_close();
+		header('Location:index.php');
+		die();
+	} else {
+		$_SESSION['passerror'] = 'invalid Login'; 
 	}
-	
-	if(isset($_POST['sub'])){
-		if($_POST['password'] === ''){
-    		$_SESSION['verify'] = 'true';
-    		unset($_SESSION['passerror']);
-    		session_write_close();
-			header('Location:index.php');
-			die();
-		} else {
-			$_SESSION['passerror'] = 'invalid Login'; 
-		}
-		
-	}
+}
 
 // Clean an check entries if they fit 
 function converti($prod, $meta) {
