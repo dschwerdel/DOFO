@@ -8,3 +8,6 @@ Functionally the php/js code creates mobile first simple html interface where yo
 Those Entries can contain meta infos (don't know what to do with them atm) and can be de/activated and deleted.
 
 Very handy. More for my families every day use. Just that I don't forget my precious shopping. 
+
+![Screenshot](redme.files/Screenshot-basic.png)
+![Screenshot](redme.files/Screenshot-unfold.png)
