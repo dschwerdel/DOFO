@@ -1,0 +1,243 @@
+/*  My Colors 
+BG: #2c3e50
+ACTIVE: #3498db
+$green: #2ecc71;
+$red: #e74c3c;
+$blue: #3498db;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$turquoise: #1abc9c;
+$border-grey: #1d1e22;
+
+IDEAS:
+transition: all 150ms ease-in-out;
+*/
+
+/* Basic CSS Props */
+body {padding: 0px; margin: 0px; font-size:2em;background-color: #2c3e50; font-family: sans serif;}
+form {margin: 0px;}
+.truncate {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.center {  position: absolute;  top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 10px;}
+
+/* The Buttons */
+/* global button settings */
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid grey;
+  border-radius: 0.6em;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 5px 10px;
+  padding: 0.5em;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+}
+/* non-button: Meta Info of Elements */
+.entrismeta {
+  border:solid #8e44ad;
+  border-radius: 5px;
+  color: #fff;
+  background-color:#8e44ad;
+  font-size: 1rem;
+  padding: 0.2em;
+}
+/* Buttons for Action form menu, created onclick */
+.subpop {
+  border:solid #f1c40f;
+  border-radius: 5px;
+  color: #000;
+  background-color:#f1c40f;
+  margin: 0 10px;
+  font-size: 1rem;
+  display: initial;
+}
+.purge {background-color:#e74c3c; border:solid #e74c3c;color:white;}
+/* Input Menu unfolder button*/
+.unfolder {
+  background-color:#2ecc71;
+}
+/* add input form to db button */
+.inbutton {
+  background-color: #2ecc71;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0px;
+  display: inline;
+  width: 90%;
+  font-size: 2em;
+  height: 90%;
+}
+/* Menu Button Burger for setting*/
+.setting {
+  display: block;
+  width: 80px; 
+  height: 64px; 
+  margin-left: auto; 
+  right: auto;
+  position: relative;
+}
+.line { 
+  position: absolute; 
+  left:10px;
+  height: 4px; 
+  width: 55px; 
+  background: #fff; 
+  border-radius: 2px;
+  display: block; 
+}
+.line:nth-child(1) { top: 12px; }
+.line:nth-child(2) { top: 28px; }
+.line:nth-child(3) { top: 44px; }
+
+
+/* div Box Layout */
+/* Main div with 2 vert. boxes */
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+/* top div box menu_bar */
+.menu_bar {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+/* bottom box list entries view */
+/* main div holding *all* */
+.lists {overflow-y: scroll;}
+/* secound div holding the elements */
+.entris_full {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+/* The entry elements itself */
+/* two column layout */
+.entris {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  border-color: #1d1e22;
+}
+/* Move date full right */
+.entrisdate, .entrisstatus {
+  text-align: right;
+}
+/* Meta info of entries */
+.entrismetis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-rows: 1fr;
+  font-size: 0.75em;
+  padding-left: 20px;
+}
+/* hidden div set active via menu_bar button + js */
+/* and hidden menu */
+.hidden_input, .hidden_menu { 
+  background-color: lightgrey; 
+  padding: 0px; 
+  display: none;
+}
+.hidden_menu {
+  position: absolute;
+  right: 0px;
+  top: 65px;
+  width: 15vw;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+
+}
+.hidden_menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* inputcontainer holding all input elements */
+.inputcontainer {
+  display: grid; 
+  grid-template-columns: 74vw 24vw;
+  padding: 0.3em;
+}
+.inputrow {  
+  font-size: 0.8rem;
+}
+.inputcont {
+  padding: 8px; 
+  display: block; 
+  border: none;
+  border-bottom: 1px solid #ccc; 
+  width: 95%;
+}
+
+/* the login */
+.login {
+  font-size: 2rem;
+  background-color: #1abc9c;
+}
+.login input{ font-size: 2rem; }
+.login #go{ background-color: #2ecc71; margin: auto; }
+
+
+/* Mobile fixing Layout under 480px */
+@media (max-width: 480px) {
+  body {font-size:0.8em; }
+  .entris {
+    grid-template-columns: 1fr;
+    width: 98vw;
+    margin: 1vw;
+    }
+  .entrismetis {
+    padding-left: 5px;
+    margin: 1vw;
+    }
+  .unfolder {
+    font-size: 1.1rem;
+  }
+  .setting {
+    width: 70px; 
+    height: 48px; 
+  }
+  .line { 
+    left:8px;
+    width: 50px; 
+  }
+  .line:nth-child(1) { top: 8px; }
+  .line:nth-child(2) { top: 20px; }
+  .line:nth-child(3) { top: 32px; }
+  .inbutton {
+    width: 84%;
+    font-size: 1.5rem;
+    height: 95%;
+    margin-left: 6px;
+  }
+  .inputcont {
+    padding: 4px;
+  }
+  .subpop {
+    margin: 0 5px;
+  }
+  .login {
+    width: 96%;
+    margin: 0px;
+  }
+  .login input{ width: 90%; }
+  .login #go{ width: 75%; }
+}
