@@ -9,5 +9,5 @@ Those Entries can contain meta infos (don't know what to do with them atm) and c
 
 Very handy. More for my families every day use. Just that I don't forget my precious shopping. 
 
-![Screenshot](redme.files/Screenshot-basic.png)
-![Screenshot](redme.files/Screenshot-unfold.png)
+![Screenshot](readme.files/Screenshot-basic.png)
+![Screenshot](readme.files/Screenshot-unfold.png)
