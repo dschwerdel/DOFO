@@ -197,8 +197,9 @@ function check_login () {
 	else {
 		$out = '';
 		$out .= '<div id="login" class="login center btn"><form name="input" action="" method="post">
-        <label for="password"></label><input type="password" value="" id="password" name="password" onClick="this.select();" />
-        <div class="error">'.$passError.'</div><input type="submit" id="go" value="GO" class="btn" name="sub" /></form></div>';
+        <label for="password"></label><input type="password" value="" id="password" name="password" onClick="" />
+        <div class="error">'.$passError.'</div><input type="submit" id="go" value="GO" class="btn" name="sub" />
+        </form><script>window.onload = function() {var input = document.getElementById("password").focus();}</script></div>';
 		echo $out;
 	}
 }
